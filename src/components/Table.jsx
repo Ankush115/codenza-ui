@@ -10,17 +10,15 @@ const Table = ({ headings, data, coloumn }) => {
           </tr>
         </thead>
         <tbody>
-          
-            {
-                data?.map?.((obj,ind)=>{
-                    return <tr key={ind}>{
-                        coloumn?.map?.((key,ind)=>{
-                            return <td key={ind}>{obj[key]}</td>
-                        })
-                    } </tr>
-                })
-            }
-          
+          {data?.map?.((obj, ind) => {
+            return (
+              <tr key={ind}>
+                {coloumn?.map?.((key, ind) => {
+                  return <td key={ind}>{obj[key]}</td>;
+                })}{" "}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
