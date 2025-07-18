@@ -22,7 +22,7 @@ const Register = () => {
     const { name, location, phone, email } = dataObj;
 
     axios
-      .post("http://localhost:3000/users/reg", { name, location, phone, email })
+      .post("https://codenza-server.vercel.app/users/reg", { name, location, phone, email })
       .then((res) => {
         const { acknowledged, insertedId } = res.data;
         if (acknowledged && insertedId) {
@@ -38,7 +38,7 @@ const Register = () => {
   };
 
   return (
-    <div className="container-sm m-5 d-inline-block border border-1 border-dark bg-info">
+    <div className="container-sm m-5 d-inline-block border border-1` border-dark bg-info">
       <div className="row justify-content-center">
         <div className="col-md-6">
 
